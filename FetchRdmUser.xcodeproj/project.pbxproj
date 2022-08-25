@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C71E11A628B727FF0037BE51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71E11A528B727FF0037BE51 /* AppDelegate.swift */; };
-		C71E11AA28B727FF0037BE51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71E11A928B727FF0037BE51 /* ViewController.swift */; };
-		C71E11B028B727FF0037BE51 /* FetchRdmUser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C71E11AE28B727FF0037BE51 /* FetchRdmUser.xcdatamodeld */; };
+		C71E11AA28B727FF0037BE51 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71E11A928B727FF0037BE51 /* MainController.swift */; };
 		C71E11B228B728000037BE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C71E11B128B728000037BE51 /* Assets.xcassets */; };
 		C71E11B528B728000037BE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71E11B328B728000037BE51 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -17,8 +16,7 @@
 /* Begin PBXFileReference section */
 		C71E11A228B727FF0037BE51 /* FetchRdmUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchRdmUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71E11A528B727FF0037BE51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C71E11A928B727FF0037BE51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C71E11AF28B727FF0037BE51 /* FetchRdmUser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FetchRdmUser.xcdatamodel; sourceTree = "<group>"; };
+		C71E11A928B727FF0037BE51 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		C71E11B128B728000037BE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C71E11B428B728000037BE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C71E11B628B728000037BE51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,21 +53,20 @@
 			isa = PBXGroup;
 			children = (
 				C71E11B628B728000037BE51 /* Info.plist */,
-				C71E11BC28B732840037BE51 /* BaseFiles */,
+				C71E11B328B728000037BE51 /* LaunchScreen.storyboard */,
+				C71E11BC28B732840037BE51 /* SupportFiles */,
 			);
 			path = FetchRdmUser;
 			sourceTree = "<group>";
 		};
-		C71E11BC28B732840037BE51 /* BaseFiles */ = {
+		C71E11BC28B732840037BE51 /* SupportFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C71E11B328B728000037BE51 /* LaunchScreen.storyboard */,
-				C71E11AE28B727FF0037BE51 /* FetchRdmUser.xcdatamodeld */,
 				C71E11B128B728000037BE51 /* Assets.xcassets */,
-				C71E11A928B727FF0037BE51 /* ViewController.swift */,
+				C71E11A928B727FF0037BE51 /* MainController.swift */,
 				C71E11A528B727FF0037BE51 /* AppDelegate.swift */,
 			);
-			path = BaseFiles;
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C71E11AA28B727FF0037BE51 /* ViewController.swift in Sources */,
-				C71E11B028B727FF0037BE51 /* FetchRdmUser.xcdatamodeld in Sources */,
+				C71E11AA28B727FF0037BE51 /* MainController.swift in Sources */,
 				C71E11A628B727FF0037BE51 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +284,6 @@
 				INFOPLIST_FILE = FetchRdmUser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -316,7 +311,6 @@
 				INFOPLIST_FILE = FetchRdmUser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -354,19 +348,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		C71E11AE28B727FF0037BE51 /* FetchRdmUser.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				C71E11AF28B727FF0037BE51 /* FetchRdmUser.xcdatamodel */,
-			);
-			currentVersion = C71E11AF28B727FF0037BE51 /* FetchRdmUser.xcdatamodel */;
-			path = FetchRdmUser.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = C71E119A28B727FF0037BE51 /* Project object */;
 }
