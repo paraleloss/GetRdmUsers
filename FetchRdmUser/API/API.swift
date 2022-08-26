@@ -8,39 +8,34 @@
 import Foundation
 
 class API {
-
-    var users: [User] = []
-    let baseURL = URL(string: "https://randomuser.me/api/?inc=name,email,dob,phone,picture&results=10")!
+    let baseURL = URL(string: "https://randomuser.me/api/?results=10")!
     
-    typealias CompletionHandler = (Error?) -> Void
+    struct EmptyData: Error {}
     
-    func getUsers(completion: @escaping CompletionHandler = { _ in}){
-        
-        URLSession.shared.dataTask(with: baseURL){
-            (data, _, error) in
-            if let error = error{
-                print("Error getting users: \(error)")
+    func getUsers(completion: @escaping(Result<[User], Error>) -> Void) {
+        URLSession.shared.dataTask(with: baseURL) { data, _, error in
+            if let error = error {
+                completion(.failure(error))
             }
-            guard let data = data else{
-                print("No data returned")
-            completion(nil)
-            return
+            guard let data = data else {
+                return completion(.failure(EmptyData()))
             }
-            
             do{
-                let newUser = try JSONDecoder().decode(Users.self, from: data)
-                print(newUser)
-                self.users = newUser.results
-                
+                let result = try JSONDecoder().decode(Users.self, from: data)
+                completion(.success(result.results))
             }
             catch{
-                print("Error decoding \(error)")
-                completion(error)
+                print(error)
+                completion(.failure(error))
             }
-            
-            completion(nil)
-            
-            
         }.resume()
+    }
+}
+
+extension Data {
+    func printJSON(){
+        if let JSONString = String(data: self, encoding: String.Encoding.utf8) {
+            print(JSONString)
+        }
     }
 }
